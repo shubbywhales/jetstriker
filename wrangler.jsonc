@@ -1,0 +1,23 @@
+     1|{
+     2|	"$schema": "node_modules/wrangler/config-schema.json",
+     3|	"name": "app",
+     4|	"main": ".open-next/worker.js",
+     5|	"compatibility_date": "2026-01-07",
+     6|	"compatibility_flags": ["nodejs_compat"],
+     7|	"observability": {
+     8|		"enabled": true,
+     9|		"logs": {
+    10|			"enabled": true,
+    11|			"invocation_logs": true
+    12|		},
+    13|		"traces": {
+    14|			"enabled": true
+    15|		}
+    16|	},
+    17|	"upload_source_maps": true,
+    18|	"assets": {
+    19|		"directory": ".open-next/assets",
+    20|		"binding": "ASSETS"
+    21|	}
+    22|}
+    23|

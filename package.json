@@ -1,0 +1,39 @@
+     1|{
+     2|	"name": "jam-app",
+     3|	"version": "0.1.0",
+     4|	"private": true,
+     5|	"type": "module",
+     6|	"scripts": {
+     7|		"predev": "node scripts/migrate-if-db.mjs",
+     8|		"dev": "next dev --turbopack",
+     9|		"build": "tsc --noEmit && next build",
+    10|		"start": "next start",
+    11|		"lint": "eslint . --config eslint.config.mjs",
+    12|		"migrate:local": "wrangler d1 migrations apply DB --local --config wrangler.jsonc",
+    13|		"migrate:prod": "wrangler d1 migrations apply DB --remote --config wrangler.jsonc",
+    14|		"preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview --config wrangler.jsonc",
+    15|		"deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy --config wrangler.jsonc",
+    16|		"cf-typegen": "wrangler types --config wrangler.jsonc --include-runtime false"
+    17|	},
+    18|	"dependencies": {
+    19|		"@tanstack/react-query": "5.90.20",
+    20|		"next": "16.1.6",
+    21|		"react": "19.2.3",
+    22|		"react-dom": "19.2.3",
+    23|		"three": "latest",
+    24|		"@types/three": "latest"
+    25|	},
+    26|	"devDependencies": {
+    27|		"@cloudflare/workers-types": "4.20260317.1",
+    28|		"@opennextjs/cloudflare": "1.16.5",
+    29|		"@tailwindcss/postcss": "^4.2.2",
+    30|		"@types/react": "19.2.3",
+    31|		"@types/react-dom": "19.2.3",
+    32|		"eslint": "9.39.2",
+    33|		"eslint-config-next": "16.1.6",
+    34|		"postcss": "8.5.3",
+    35|		"tailwindcss": "^4.2.2",
+    36|		"typescript": "5.8.3",
+    37|		"wrangler": "4.77.0"
+    38|	}
+    39|}

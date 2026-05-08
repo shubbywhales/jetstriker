@@ -1,0 +1,36 @@
+     1|import type { ReactNode } from 'react';
+     2|
+     3|import { Providers } from '@/components/providers';
+     4|import './globals.css';
+     5|
+     6|export const metadata = {
+     7|  title: 'Jet Striker',
+     8|  other: {
+     9|    'vibejam-widget': 'enabled',
+    10|  },
+    11|};
+    12|
+    13|export const viewport = {
+    14|  width: 'device-width',
+    15|  initialScale: 1,
+    16|  maximumScale: 1,
+    17|  maximumScale: 1,
+    18|  userScalable: false,
+    19|  viewportFit: 'cover',
+    20|};
+    21|
+    22|export default function RootLayout({ children }: { children: ReactNode }) {
+    23|  return (
+    24|    <html lang="en">
+    25|      <head>
+    26|        <script async src="https://vibej.am/2026/widget.js"></script>
+    27|      </head>
+    28|      <body>
+    29|        <Providers>
+    30|          <div className="fixed inset-0 h-dvh w-screen overflow-hidden bg-background text-foreground">{children}</div>
+    31|        </Providers>
+    32|      </body>
+    33|    </html>
+    34|  );
+    35|}
+    36|

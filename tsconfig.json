@@ -1,0 +1,52 @@
+     1|{
+     2|  "compilerOptions": {
+     3|    "target": "ES2024",
+     4|    "lib": [
+     5|      "ES2024",
+     6|      "DOM",
+     7|      "DOM.Iterable"
+     8|    ],
+     9|    "module": "esnext",
+    10|    "moduleResolution": "bundler",
+    11|    "jsx": "react-jsx",
+    12|    "baseUrl": ".",
+    13|    "paths": {
+    14|      "@/*": [
+    15|        "./src/*"
+    16|      ]
+    17|    },
+    18|    "strict": true,
+    19|    "skipLibCheck": true,
+    20|    "isolatedModules": true,
+    21|    "noEmit": true,
+    22|    "allowImportingTsExtensions": true,
+    23|    "noUnusedLocals": true,
+    24|    "noUnusedParameters": true,
+    25|    "noFallthroughCasesInSwitch": true,
+    26|    "allowJs": true,
+    27|    "incremental": true,
+    28|    "esModuleInterop": true,
+    29|    "resolveJsonModule": true,
+    30|    "plugins": [
+    31|      {
+    32|        "name": "next"
+    33|      }
+    34|    ]
+    35|  },
+    36|  "include": [
+    37|    "src",
+    38|    "next-env.d.ts",
+    39|    "css.d.ts",
+    40|    "worker-configuration.d.ts",
+    41|    ".next/types/**/*.ts",
+    42|    ".next/dev/types/**/*.ts"
+    43|  ],
+    44|  "exclude": [
+    45|    ".open-next",
+    46|    ".next",
+    47|    "dist",
+    48|    ".wrangler",
+    49|    "node_modules"
+    50|  ]
+    51|}
+    52|
